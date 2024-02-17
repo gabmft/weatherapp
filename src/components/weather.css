@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 80vw;
+    height: 80vh;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    margin: 20px auto;
+    padding-top: 50px;
+}
+
+
+.search-container{
+    height: 2.5vh;
+    display: flex;
+    gap: 0.6em;
+    justify-content: center;
+
+}
+
+.input-field{
+    width: 20%;
+    font-size: clamp(0.5rem, 0.9vw, 1.45rem);
+    padding-left: 15px;
+   box-shadow: 3px 5px 5px rgb(167, 208, 203);
+   border: none;
+}
+
+.input-field:focus{
+    outline: none;
+}
+
+.input-field::placeholder{
+    color: #626262
+}
+.search-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5%;
+    font-size: clamp(0.4rem, 0.9vw, 1.3rem);
+    box-shadow: 3px 5px 5px rgb(167, 208, 203);
+    border: none;
+   font-weight: none;
+   cursor: pointer;
+   color: #626262
+}
+
+.search-button:hover{
+    background-color: black;
+    color: white;
+}
+
+.weather-data{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    width: 30%;
+    background-image: linear-gradient(180deg, #130754 0%, #3b2f80 100%);
+    color: white;
+    font-size: 1.3vw;
+    text-align: center;
+    padding: 0;
+}
+
+.weather-image img{
+    width: 7vw;
+    height: 7vh;
+    object-fit: contain;
+
+}
+.weather-data p{
+    margin: 0;
+    padding: 0;
+}
+
+.container1{
+   display: grid;
+   grid-template-columns: auto auto;
+}
+.humidity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wind{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wind-image img{
+    width: 3vw;
+    height: 3vh;
+    object-fit: contain;
+}
+
+.humidity-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+.wind-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+.humidity-image img{
+    width: 3vw;
+    height: 3vh;
+    object-fit: contain;
+}
+.text-wrap{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
