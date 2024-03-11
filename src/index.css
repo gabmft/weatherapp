@@ -5,8 +5,25 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-    background-image: url('./components/assets/background-image.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url('./components/assets/background.jpg');
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header{
+  opacity: 0.5;
+  width: 100%;
+  }
+
+.header-title{
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+  text-align: center;
+  padding: 5px;
+  color: rgb(37, 142, 147);
+  letter-spacing: 2px;
+  font-size: 2rem;
+}
+html{
+  box-sizing: border-box;
 }
