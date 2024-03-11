@@ -1,5 +1,4 @@
 import React from 'react'
-import weathericon from './weathericon'
 import './weathercard.css'
 
 const Weathercard = ({props}) => {
