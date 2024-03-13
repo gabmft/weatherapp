@@ -11,8 +11,6 @@ const Weather = () => {
     const [city, setCity] = useState('')
     const [query, setQuery] = useState ('Iasi')
     const [weatherData1, setWeatherData1] = useState([{}])
-    /* const [latitude, setLatitude] = useState()
-    const [longitude, setLongitude] = useState() */
     const [location, setLocation] = useState('')
     const [country, setCountry] = useState('')
     const [forecast, setForecast] = useState([])
@@ -46,7 +44,8 @@ const Weather = () => {
     }
 
         function handleKey(e) {
-      if (e.key === 'Enter' && city !== '') handleSubmit(e)
+      if (e.key === 'Enter' && city !== '') handleSubmit()
+      else if (e.key === 'Enter') alert('Please, provide a city name!')
     }
 
 
@@ -80,7 +79,7 @@ const Weather = () => {
         onChange={(e) => setCity(e.target.value)}
         onKeyDown={handleKey}
         />
-        <button className='search-button' disabled={city !== ''} type='submit' onClick={() => handleSubmit()}>Search</button>
+        <button className='search-button' type='submit' onClick={() => handleSubmit()}>Search</button>
        <p>or</p>
         <button className='location-button' type='submit' onClick={getLocation}>Use current location</button>
         <div className="current-location-data">
@@ -137,7 +136,7 @@ const Weather = () => {
         </div>
         <section>
           <div className="five-days">
-            <p>Five days forecast</p>
+            Five days forecast
           </div>
         </section>
         <div className="second-container">
