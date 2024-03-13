@@ -37,12 +37,16 @@ const Weather = () => {
     
 
     const handleSubmit = () => {
+      if (city !== '') {
       setQuery(city)
-      setCity('')
+      setCity('')}
+      else {
+        alert('Please, provide a city name!')
+      }
     }
 
         function handleKey(e) {
-      if (e.key === 'Enter') handleSubmit(e)
+      if (e.key === 'Enter' && city !== '') handleSubmit(e)
     }
 
 
@@ -76,7 +80,7 @@ const Weather = () => {
         onChange={(e) => setCity(e.target.value)}
         onKeyDown={handleKey}
         />
-        <button className='search-button' type='submit' onClick={() => handleSubmit()}>Search</button>
+        <button className='search-button' disabled={city !== ''} type='submit' onClick={() => handleSubmit()}>Search</button>
        <p>or</p>
         <button className='location-button' type='submit' onClick={getLocation}>Use current location</button>
         <div className="current-location-data">
