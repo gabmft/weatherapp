@@ -12,17 +12,18 @@ body {
 }
 
 .header{
-  opacity: 0.5;
   width: 100%;
+  padding: 20px 0;
   }
 
 .header-title{
   font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
   text-align: center;
   padding: 5px;
-  color: rgb(37, 142, 147);
+  color: white;
   letter-spacing: 2px;
   font-size: 2rem;
+  
 }
 html{
   box-sizing: border-box;

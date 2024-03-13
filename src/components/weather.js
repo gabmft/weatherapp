@@ -90,7 +90,12 @@ const Weather = () => {
       </div>
         
         {typeof weatherData1.current === 'undefined' ? (
-    <></>
+          <><div className="current-forecast">
+    <div className="weather-data" style={{height: "18vh"}}>
+      <p className='not-found'>Weather data not found, please try again!</p>
+    </div>
+    </div>
+    </>
     ) : (
       <>
       <div className="current-forecast">
@@ -99,8 +104,9 @@ const Weather = () => {
       <div className="weather-image">
          <img src={weatherData1.current.condition.icon} alt="weather-icon"/>
       </div>
-      <p>Temperature: {Math.round(weatherData1.current.temp_c)} °C</p>
+      <p>Current condition:</p>
       <p>{weatherData1.current.condition.text}</p>
+      <p>Temperature: {Math.round(weatherData1.current.temp_c)} °C</p>
       {/* <p>{Math.round(weatherData1.list[0].main.temp_min)}°C / {Math.round(weatherData1.list[0].main.temp_max)}°C</p> */}
         <div className="weather-variables">
         <div className="container1">
@@ -136,7 +142,7 @@ const Weather = () => {
         </section>
         <div className="second-container">
         {
-        forecast.map((item) => (
+        forecast.map((item, id) => (
         <Weathercard props = {item}/>
         ))
         }

@@ -38,6 +38,7 @@
     padding: 5px 0px 5px 5px;
    box-shadow: 3px 3px 5px grey;
    border: none;
+   border-radius: 8px;
   
 }
 
@@ -92,6 +93,7 @@
     box-shadow: 3px 3px 5px lightslategray;
     line-height: 1.5rem;
     color: white;
+    border-radius: 8px;
 }
 
 
@@ -108,7 +110,7 @@
 .weather-data{
     display: flex;
     flex-direction: column; 
-    width: 40%;
+    width: 46%;
     border-radius: 8px;
     object-fit: contain;
     /* background-color:rgba(63,76,11,0.3); */
@@ -178,7 +180,10 @@
     justify-content: space-around;
     padding: 0px 10px;
 }
-
+.not-found{
+    margin: auto;
+    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+}
 .second-container{
     display: flex;
     margin-inline: 10px;
