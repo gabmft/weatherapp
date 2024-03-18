@@ -20,7 +20,6 @@ const Weather = () => {
         const {latitude, longitude} = position.coords
         fetch(`https://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=1&appid=927672c5617de98d5f562e32ab2ba9d1`)
         .then(res => res.json()).then(data => {
-          console.log(data)
           setQuery(data[0].name)
           setLocation(data[0].name)
           setCountry(data[0].country)
@@ -56,9 +55,8 @@ const Weather = () => {
         const json1 = await response1.json()
         if (response1.status === 200) {
         setWeatherData1(json1)
-        console.log({json1})
+        console.log(weatherData1)
         setForecast(json1.forecast.forecastday)
-        console.log(json1.forecast.forecastday)
       } else return (alert('Please, provide a valid city name!'))
         } catch (error) {}
       }
@@ -136,7 +134,7 @@ const Weather = () => {
         </div>
         <section>
           <div className="five-days">
-            Five days forecast
+            Three days forecast
           </div>
         </section>
         <div className="second-container">
