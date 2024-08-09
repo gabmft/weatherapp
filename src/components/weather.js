@@ -49,7 +49,7 @@ const Weather = () => {
     useEffect (() => {
      async function fetchData () {
       try {
-        const response1 = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=bbda70f2fbbc4dee8f1100517240503&q=${query}&days=6&lang=en&aqi=no&alerts=no`)
+        const response1 = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=b377a79129c34a429c5111230240908&q=${query}&days=6&lang=en&aqi=no&alerts=no`)
         const json1 = await response1.json()
         if (response1.status === 200) {
         setWeatherData1(json1)
